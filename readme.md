@@ -11,6 +11,6 @@ make -j4
 
 make install
 
-run the scorched3d or scorched3ds in console (I had to configure with 3d and play with 3ds)
+run the scorched3d or scorched3dc in console (I had to configure with scorched3d and play with scorched3dc)
 
 #the game expects the data files to be in /usr/local/games/scorched3d/share just copy the data directory over and it should work
