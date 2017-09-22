@@ -1,7 +1,7 @@
 
 #Compile & Install: Any linux distro (game version 44)
 
-sudo apt-get install debhelper dh-autoreconf gawk libalut-dev libexpat1-dev libfftw3-dev libfreetype6-dev libgl1-mesa-dev libglew-dev libglu1-mesa-dev libjpeg-dev libogg-dev libopenal-dev libpng-dev libsdl-net1.2-dev libsdl1.2-dev libvorbis-dev libwxgtk2.8-dev pkg-config
+sudo apt-get install debhelper dh-autoreconf gawk libalut-dev libexpat1-dev libfftw3-dev libfreetype6-dev libgl1-mesa-dev libglew-dev libglu1-mesa-dev libjpeg-dev libogg-dev libopenal-dev libpng-dev libsdl-net1.2-dev libsdl1.2-dev libvorbis-dev libwxgtk2.8-dev pkg-config jackd2
 
 #unzip with 7zip data/globalmods/apoc.7z and none.7z.001 none.7z.002
 
@@ -11,6 +11,31 @@ make -j4
 
 make install
 
-run the scorched3d or scorched3dc in console (I had to configure with scorched3d and play with scorched3dc)
+#add the following to /etc/security/limits.conf
+
+@audio - rtprio 99
+
+@audio - memlock 83274202
+
+@audio - nice -10
+
+#add the following to /etc/security/limits.d/99-realtime.conf
+
+@realtime   -  rtprio     99
+
+@realtime   -  memlock    unlimited
+
+
+sudo groupadd realtime
+
+#be sure to use your login id for 'yourUserID'
+
+sudo usermod -a -G realtime yourUserID
+
+#Run the jackd in a seperate terminal
+
+jackd -r -d alsa -r 44100
+
+run the scorched3d to setup and the scorched3dc in the terminal (I had to configure with scorched3d and play with scorched3dc)
 
 #the game expects the data files to be in /usr/local/games/scorched3d/share just copy the data directory over and it should work
