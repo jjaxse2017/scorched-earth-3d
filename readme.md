@@ -1,3 +1,10 @@
+#Description
+
+The game source code typos were modified so that it would compile with gcc with the flags O3 and standard c++ 17. The modification's included the ./configure file for the removal of debug and addition of the stated gcc flags. The other updates included only typos where the functions required an numerical definition that was missing ie function(4, 4) was updated to (4, 4, 0, 0).
+
+My goal was to get the best/fastest game code and hopefully pass on a great reference for others projects (android/raspberry pi). A great example is Xash3d released a very nice android game of halflife/counterstrike 1.6.
+
+The release contains the compiled binary and the zipped up game files are included in the mods folder as .7z
 
 #Compile & Install: Any linux distro (game version 44)
 
