@@ -1,6 +1,6 @@
 #Description
 
-The game source code typos were modified so that it would compile with gcc with the flags O3 and standard c++ 17. The modification's included the ./configure file for the removal of debug and addition of the stated gcc flags. The other updates included only typos where the functions required an numerical definition that was missing ie function(4, 4) was updated to (4, 4, 0, 0).
+The game source code typos were modified so that it would compile with gcc with the flags O3 and standard c++ 17. The modification's included the ./configure file for the removal of debug and addition of the stated gcc flags. The other updates included only typos where the functions required an numerical definition that was missing ie wxsizer(4, 4) was updated to (4, 4, 0, 0).
 
 My goal was to get the best/fastest game code and hopefully pass on a great reference for others projects (android/raspberry pi). A great example is Xash3d released a very nice android game of halflife/counterstrike 1.6.
 
@@ -45,4 +45,4 @@ jackd -r -d alsa -r 44100
 
 run the scorched3d to setup and the scorched3dc in the terminal (I had to configure with scorched3d and play with scorched3dc)
 
-#the game expects the data files to be in /usr/local/games/scorched3d/share just copy the data directory over and it should work
+#the game expects the unzipped data files to be in /usr/local/games/scorched3d/share (copy the sourcecode data directory)
