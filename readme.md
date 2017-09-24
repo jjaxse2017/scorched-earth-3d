@@ -43,6 +43,6 @@ sudo usermod -a -G realtime yourUserID
 
 jackd -r -d alsa -r 44100
 
-run the scorched3d to setup and the scorched3dc in the terminal (I had to configure with scorched3d and play with scorched3dc)
+Run scorched3dc in the terminal to play the game (Configure with scorched3d first, you'll get errors during configure just hit continue)
 
 #the game expects the unzipped data files to be in /usr/local/games/scorched3d/share (copy the sourcecode data directory)
