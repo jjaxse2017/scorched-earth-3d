@@ -18,7 +18,7 @@ make -j4
 
 make install
 
-#add the following to /etc/security/limits.conf
+#This is for the jackd... though sound seems to work in ubuntu without adding the following to /etc/security/limits.conf
 
 @audio - rtprio 99
 
@@ -39,7 +39,7 @@ sudo groupadd realtime
 
 sudo usermod -a -G realtime yourUserID
 
-#Run the jackd in a seperate terminal
+#login and log out then run the jackd in a seperate terminal (again sounds eems to work without jackd in ubuntu)
 
 jackd -r -d alsa -r 44100
 
