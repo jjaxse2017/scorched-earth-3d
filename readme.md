@@ -18,7 +18,13 @@ make -j4
 
 make install
 
-#This is for the jackd... though sound seems to work in ubuntu without adding the following to /etc/security/limits.conf
+Run scorched3dc in the terminal to play the game (Configure with scorched3d first, you'll get errors during configure just hit continue)
+
+#the game expects the unzipped data files to be in /usr/local/games/scorched3d/share (copy the sourcecode data directory)
+
+#This is for the jackd... though sound seems to work in ubuntu without doing the following:
+
+#add the following to /etc/security/limits.conf
 
 @audio - rtprio 99
 
@@ -39,10 +45,6 @@ sudo groupadd realtime
 
 sudo usermod -a -G realtime yourUserID
 
-#login and log out then run the jackd in a seperate terminal (again sounds eems to work without jackd in ubuntu)
+#log out and login to X (you may have to restart) and then run the jackd in a seperate x terminal (again sounds works without jackd in ubuntu)
 
 jackd -r -d alsa -r 44100
-
-Run scorched3dc in the terminal to play the game (Configure with scorched3d first, you'll get errors during configure just hit continue)
-
-#the game expects the unzipped data files to be in /usr/local/games/scorched3d/share (copy the sourcecode data directory)
