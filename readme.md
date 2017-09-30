@@ -49,7 +49,7 @@ sudo usermod -a -G realtime yourUserID
 
 jackd -r -d alsa -r 44100
 
-#check that you're using the most up to date open gl version (gpu performance improves because the current open source AMD radeon driver is lagging behind with opengl 4+ default support)
+# check that you're using the most up to date open gl version (gpu performance improves because the current open source AMD radeon driver is lagging behind with opengl 4+ default support)
 
 sudo apt-get install libgl1-mesa-dev mesa-common-dev driconf
 
