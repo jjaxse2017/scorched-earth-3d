@@ -48,3 +48,15 @@ sudo usermod -a -G realtime yourUserID
 #log out and login to X (you may have to restart) and then run the jackd in a seperate x terminal (again sounds works without jackd in ubuntu)
 
 jackd -r -d alsa -r 44100
+
+#check that you're using the most up to date open gl version (gpu performance improves because the current open source AMD radeon driver is lagging behind with opengl 4+ default support)
+
+sudo apt-get install libgl1-mesa-dev mesa-common-dev driconf
+
+glxinfo | grep core
+
+glxgears -info
+
+#if glx core info shows a high open gl version than glx gears run the folowing command (my core open gl version was 4.1 and yes COMPAT needs to be there for it to work)
+
+MESA_GL_VERSION_OVERRIDE=4.1COMPAT ./scorched3dc
