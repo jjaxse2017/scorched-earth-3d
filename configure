@@ -3701,7 +3701,7 @@ elif test $ac_cv_prog_cc_g = yes; then
   fi
 else
   if test "$GCC" = yes; then
-    CFLAGS="-O2"
+    CFLAGS="-O3"
   else
     CFLAGS=
   fi
@@ -4233,13 +4233,13 @@ if test "$ac_test_CXXFLAGS" = set; then
   CXXFLAGS=$ac_save_CXXFLAGS
 elif test $ac_cv_prog_cxx_g = yes; then
   if test "$GXX" = yes; then
-    CXXFLAGS="-std=gnu++17 -O3"
+    CXXFLAGS="-std=c++17 -std=c++1z -O3"
   else
     CXXFLAGS="-g"
   fi
 else
   if test "$GXX" = yes; then
-    CXXFLAGS="-O3"
+    CXXFLAGS="-std=c++17 -std=c++1z -O3"
   else
     CXXFLAGS=
   fi
@@ -4473,7 +4473,7 @@ fi
 
 
 LDFLAGS="$LDFLAGS -L/usr/X11R6/lib -L/usr/X11R6"
-CPPFLAGS="$CPPFLAGS -std=gnu++17 -I/usr/X11R6/include -I/usr/X11R6"
+CPPFLAGS="$CPPFLAGS -O3 -std=c++17 -std=c++1z -I/usr/X11R6/include -I/usr/X11R6"
 
 if test `uname` == Darwin; then
 LDFLAGS="$LDFLAGS -lmx"
