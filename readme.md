@@ -59,4 +59,37 @@ glxgears -info
 
 #if glx core info shows a high open gl version than glx gears run the folowing command (my core open gl version was 4.1 and yes COMPAT needs to be there for it to work)
 
+driconf #Set to overide gl version and use extra thread
+
 MESA_GL_VERSION_OVERRIDE=4.1COMPAT ./scorched3dc
+
+
+Unigine Heaven Benchmark 4.0 (Windows DX11/Updated Mesa 13.0 GCC 7.0/LLVM 6.0 std C++17, no debug)
+
+
+FPS: 56.4/72.5 
+
+Score: 1422 /1825
+
+Min FPS:	8.6 / 9.7
+
+Max FPS:	99.5 / 123.9
+
+System Platform:	Windows NT 6.2 (build 9200) 64bit / Linux 4.14.0-999-generic x86_64
+
+CPU model:	Intel(R) Core(TM)2 Duo CPU E6850 @ 3.00GHz (3829MHz) x2 / Intel(R) Core(TM)2 Duo CPU E6850 @ 3.00GHz (3829MHz) x2
+ 
+GPU model:	AMD Radeon HD 5800 Series 15.201.1151.1008 (1024MB) x2 / Unknown GPU (256MB) x1
+
+
+Settings
+
+Render:	Direct3D11 / OpenGL
+
+Mode:	1680x1050 8xAA fullscreen / 1680x1050 8xAA windowed
+
+Preset:	Custom / Custom
+
+Quality:	High / High
+
+Tessellation:	Disabled / Disabled
