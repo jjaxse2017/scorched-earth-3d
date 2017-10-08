@@ -60,7 +60,6 @@ glxgears -info
 #if glx core info shows a high open gl version than glx gears run the folowing command (my core open gl version was 4.1 and yes COMPAT needs to be there for it to work)
 
 driconf #Set to overide gl version and use extra thread
-
 MESA_GL_VERSION_OVERRIDE=4.1COMPAT ./scorched3dc
 
 
@@ -84,7 +83,7 @@ GPU model:	AMD Radeon HD 5800 Series 15.201.1151.1008 (1024MB) x2 / Unknown GPU 
 
 Settings
 
-Render:	Direct3D11 / OpenGL
+Render:	Direct3D11 / OpenGL (Special note here on windows open gl the FPS was lower than 10)
 
 Mode:	1680x1050 8xAA fullscreen / 1680x1050 8xAA windowed
 
