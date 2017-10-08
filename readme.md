@@ -51,29 +51,32 @@ jackd -r -d alsa -r 44100
 
 #check that you're using the most up to date opengl version/Mesa -- (gpu performance improves because the current open source AMD radeon driver is lagging behind with opengl 4+ default support)
 
-sudo apt-get install libgl1-mesa-dev mesa-common-dev driconf
+sudo apt-get install libgl1-mesa-dev mesa-common-dev driconf indicator-cpufreq
 
 glxinfo | grep core
 
 glxgears -info
 
-#if glx core info shows a high open gl version than glx gears run the folowing command (my core open gl version was 4.1 and yes COMPAT needs to be there for it to work)
+#if glx core info shows a high open gl version than glx gears run the folowing command (my max core open gl version was 4.1 and yes COMPAT needs to be there for it to work)
 
 driconf #Set to overide gl version and use extra thread
+Right click the cpufreq indicator that should have appeared in the right upper hand corner near the shutdown button and set the system to performance mode
 
-MESA_GL_VERSION_OVERRIDE=4.1COMPAT ./scorched3dc
+MESA_GL_VERSION_OVERRIDE=4.5COMPAT ./scorched3dc
 
+#now you may have noticed that I set the GL version to 4.5, that's because mesa actually supports 4.5, yet does not do so officially, however your graphics card must supported. Nvidia users have less to worry about, so I've went ahead and attached the AMD drivers /w insturctions to the release, that were recently compiled. See the mesa repository on how to compile/use your own from mainline github code (the process is somewhat tedious).... Nvidia users, those interested.
 
-Unigine Heaven Benchmark 4.0 (Windows DX11/Updated Mesa 13.0 GCC 7.0/LLVM 6.0 std C++17, no debug)
+Unigine Heaven Benchmark 4.0 (DX12 installed and using DX11 vs Updated Mesa 13.0 GCC 7.0/LLVM 6.0 std C++17, no debug)
 
+#No overclocking enabled
 
-FPS: 56.4/72.5 
+FPS: 56.4/83.5 
 
-Score: 1422 /1825
+Score: 1422 /2104
 
-Min FPS:	8.6 / 9.7
+Min FPS:	8.6 / 31.8
 
-Max FPS:	99.5 / 123.9
+Max FPS:	99.5 / 147.9
 
 System Platform:	Windows NT 6.2 (build 9200) 64bit / Linux 4.14.0-999-generic x86_64
 
