@@ -66,19 +66,31 @@ MESA_GL_VERSION_OVERRIDE=4.5COMPAT ./scorched3dc
 
 --One open source radeon gpu performs better than two windows crossfire radeon gpu's
 
-#now you may have noticed that I set the GL version to 4.5, that's because mesa actually supports 4.5, yet does not do so officially, however your graphics card must supported. Nvidia users have less to worry about, so I've went ahead and attached the AMD drivers /w insturctions to the release, that were recently compiled. See the mesa repository on how to compile/use your own from mainline github code (the process is somewhat tedious).... Nvidia users, those interested.
+#now you may have noticed that I set the GL version to 4.5, that's because mesa actually supports 4.5, yet does not do so officially, however your graphics card must supported. I went ahead and attached the AMD drivers to the release https://github.com/jjaxse2017/scorched-earth-3d/releases. See the mainline mesa expermental repository https://github.com/jjaxse2017/Mainline-Mesa-Expermental on how to compile/use your own from mainline github code, Nvidia users, those interested.
+
+sudo unzip lib32.zip libexpat.zip testmesa3.zip -d /
+
+export LIBGL_DRIVERS_PATH=/testmesa3:/lib32
+
+export LD_LIBRARY_PATH=/testmesa3:/lib32:/usr/local/lib/:/usr/local/lib/libexpat32:
+
+export EGL_DRIVERS_PATH=/testmesa3:/lib32
+
+#DRI_PRIME is for your 2nd gpu if you have one, otherwise you may omit that command
+
+DRI_PRIME=1 MESA_GL_VERSION_OVERRIDE=4.5COMPAT ./scorched3dc
 
 Unigine Heaven Benchmark 4.0 (DX12 installed and using DX11 vs Updated Mesa 13.0 GCC 7.0/LLVM 6.0 std C++17, no debug)
 
 #No overclocking enabled
 
-FPS: 56.4/83.5 
+FPS: 56.4/88.9 
 
-Score: 1422 /2104
+Score: 1422 /2240
 
-Min FPS:	8.6 / 31.8
+Min FPS:	8.6 / 32.6
 
-Max FPS:	99.5 / 147.9
+Max FPS:	99.5 / 157.6
 
 System Platform:	Windows NT 6.2 (build 9200) 64bit / Linux 4.14.0-999-generic x86_64
 
