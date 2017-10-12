@@ -74,7 +74,7 @@ sudo unzip lib32.zip libexpat.zip testmesa3.zip -d /
 
 export LIBGL_DRIVERS_PATH=/testmesa64:/testmesa32
 
-export LD_LIBRARY_PATH=/testmesa64:/testmesa32:/usr/local/lib/:/usr/local/lib/libexpat32:
+export LD_LIBRARY_PATH=/testmesa64:/testmesa32:/usr/local/lib/libexpat64:/usr/local/lib/libexpat32
 
 export EGL_DRIVERS_PATH=/testmesa64:/testmesa32
 
