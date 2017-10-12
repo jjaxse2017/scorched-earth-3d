@@ -70,7 +70,7 @@ MESA_GL_VERSION_OVERRIDE=4.5COMPAT ./scorched3dc
 
 #now you may have noticed that the GL version is to 4.5, that's because mesa actually supports 4.5, though currently does not do so officially, however your graphics card hardware must support it. I went ahead and attached the AMD drivers to the release https://github.com/jjaxse2017/scorched-earth-3d/releases. See the mainline mesa expermental repository https://github.com/jjaxse2017/Mainline-Mesa-Expermental on how to compile from mesa mainline.
 
-sudo unzip lib32.zip libexpat.zip testmesa3.zip -d /
+sudo unzip lib32.zip testmesa_x32_x64.zip -d /
 
 export LIBGL_DRIVERS_PATH=/testmesa64:/testmesa32
 
