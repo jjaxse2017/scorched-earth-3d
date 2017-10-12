@@ -18,6 +18,8 @@ make -j4
 
 make install
 
+strip --strip-unneeded --remove-section=.comment scorched3dc
+
 Run scorched3dc in the terminal to play the game (Configure with scorched3d first, you'll get errors during configure just hit continue)
 
 #the game expects the unzipped data files to be in /usr/local/games/scorched3d/share (copy the sourcecode data directory)
