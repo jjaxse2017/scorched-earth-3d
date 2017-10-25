@@ -308,56 +308,56 @@ TankMenus::PlayerMenu::PlayerMenu()
 		"data/images/settinga.bmp",
 		false));
 	DIALOG_ASSERT(map->getBits());
-	MainMenuDialog::instance()->addMenu(LANG_RESOURCE("GAME", "Game"), 
-		"Game",
-		LANG_RESOURCE("GAME_MENU", "Options affecting the game"),
+	MainMenuDialog::instance()->addMenu(LANG_RESOURCE((char *)"GAME", (char *)"Game"), 
+		(char *)"Game",
+		LANG_RESOURCE((char *)"GAME_MENU", (char *)"Options affecting the game"),
 		32, 
 		ClientState::StatePlaying, this, map);
 
-	MainMenuDialog::instance()->addMenuItem("Game", 
-		GLMenuItem(LANG_RESOURCE("CLEAR_TRACERS", "Clear Tracers"),
+	MainMenuDialog::instance()->addMenuItem((char *)"Game", 
+		GLMenuItem(LANG_RESOURCE((char *)"CLEAR_TRACERS", (char *)"Clear Tracers"),
 		new ToolTip(ToolTip::ToolTipHelp, 
-			LANG_RESOURCE("CLEAR_TRACERS", "Clear Tracers"), 
-			LANG_RESOURCE("CLEAR_TRACERS_TOOLTIP", "Remove all tracer lines."))));
+			LANG_RESOURCE((char *)"CLEAR_TRACERS", (char *)"Clear Tracers"), 
+			LANG_RESOURCE((char *)"CLEAR_TRACERS_TOOLTIP", (char *)"Remove all tracer lines."))));
 
-	MainMenuDialog::instance()->addMenuItem("Game", bar);
+	MainMenuDialog::instance()->addMenuItem((char *)"Game", bar);
 
-	MainMenuDialog::instance()->addMenuItem("Game", 
-		GLMenuItem(LANG_RESOURCE("SKIP_MOVE", "Skip Move"),
+	MainMenuDialog::instance()->addMenuItem((char *)"Game", 
+		GLMenuItem(LANG_RESOURCE((char *)"SKIP_MOVE", (char *)"Skip Move"),
 		new ToolTip(ToolTip::ToolTipHelp, 
-			LANG_RESOURCE("SKIP_MOVE", "Skip Move"), 
-			LANG_RESOURCE("SKIP_MOVE_TOOLTIP", "Player forfits this move."))));
-	MainMenuDialog::instance()->addMenuItem("Game", 
-		GLMenuItem(LANG_RESOURCE("RESIGN_ROUND", "Resign Round"),
+			LANG_RESOURCE((char *)"SKIP_MOVE", (char *)"Skip Move"), 
+			LANG_RESOURCE((char *)"SKIP_MOVE_TOOLTIP", (char *)"Player forfits this move."))));
+	MainMenuDialog::instance()->addMenuItem((char *)"Game", 
+		GLMenuItem(LANG_RESOURCE((char *)"RESIGN_ROUND", (char *)"Resign Round"),
 		new ToolTip(ToolTip::ToolTipHelp, 
 			LANG_RESOURCE("RESIGN_ROUND", "Resign Round"), 
 			LANG_RESOURCE("RESIGN_ROUND_TOOLTIP", 
 			"Player resigns from this round.\n"
 			"Player takes no part in the rest of the round."))));
 
-	MainMenuDialog::instance()->addMenuItem("Game", bar);
+	MainMenuDialog::instance()->addMenuItem((char *)"Game", bar);
 
-	MainMenuDialog::instance()->addMenuItem("Game", 
-		GLMenuItem(LANG_RESOURCE("EXIT_GAME", "Exit Game"),
+	MainMenuDialog::instance()->addMenuItem((char *)"Game", 
+		GLMenuItem(LANG_RESOURCE((char *)"EXIT_GAME", (char *)"Exit Game"),
 		new ToolTip(ToolTip::ToolTipHelp, 
-			LANG_RESOURCE("EXIT_GAME", "Exit Game"), 
-			LANG_RESOURCE("EXIT_GAME_TOOLTIP", "Stop Playing Scorched."))));
+			LANG_RESOURCE((char *)"EXIT_GAME", (char *)"Exit Game"), 
+			LANG_RESOURCE((char *)"EXIT_GAME_TOOLTIP", (char *)"Stop Playing Scorched."))));
 	if (!ClientParams::instance()->getConnectedToServer())
 	{
-		MainMenuDialog::instance()->addMenuItem("Game",
-			GLMenuItem(LANG_RESOURCE("MASS_TANK_KILL", "Mass Tank Kill"),
+		MainMenuDialog::instance()->addMenuItem((char *)"Game",
+			GLMenuItem(LANG_RESOURCE((char *)"MASS_TANK_KILL", (char *)"Mass Tank Kill"),
 			new ToolTip(ToolTip::ToolTipHelp, 
-				LANG_RESOURCE("MASS_TANK_KILL", "Mass Tank Kill"),
-				LANG_RESOURCE("MASS_TANK_KILL_TOOLTIP", 
-				"Kill all tanks.\nStarts the next round."))));
+				LANG_RESOURCE((char *)"MASS_TANK_KILL", (char *)"Mass Tank Kill"),
+				LANG_RESOURCE((char *)"MASS_TANK_KILL_TOOLTIP", 
+				(char *)"Kill all tanks.\nStarts the next round."))));
 
-		MainMenuDialog::instance()->addMenuItem("Game", bar);
+		MainMenuDialog::instance()->addMenuItem((char *)"Game", bar);
 
-		MainMenuDialog::instance()->addMenuItem("Game",
-			GLMenuItem(LANG_RESOURCE("SAVE", "Save"),
+		MainMenuDialog::instance()->addMenuItem((char *)"Game",
+			GLMenuItem(LANG_RESOURCE((char *)"SAVE", (char *)"Save"),
 			new ToolTip(ToolTip::ToolTipHelp, 
-				LANG_RESOURCE("SAVE", "Save"),
-				LANG_RESOURCE("SAVE_TOOLTIP", "Save this game."))));
+				LANG_RESOURCE((char *)"SAVE", (char *)"Save"),
+				LANG_RESOURCE((char *)"SAVE_TOOLTIP", (char *)"Save this game."))));
 	}
 }
 
@@ -419,9 +419,9 @@ TankMenus::AccessoryMenu::AccessoryMenu()
 		"data/images/bomba.bmp",
 		false));
 	DIALOG_ASSERT(map->getBits());
-	MainMenuDialog::instance()->addMenu(LANG_RESOURCE("WEAPONS", "Weapons"), 
-		"Weapons", 
-		LANG_RESOURCE("WEAPONS_WINDOW", "Change the current weapon and enable defenses"),
+	MainMenuDialog::instance()->addMenu(LANG_RESOURCE((char *)"WEAPONS", (char *)"Weapons"), 
+		(char *)"Weapons", 
+		LANG_RESOURCE((char *)"WEAPONS_WINDOW", (char *)"Change the current weapon and enable defenses"),
 		32, 
 		ClientState::StatePlaying, this, map);
 }
