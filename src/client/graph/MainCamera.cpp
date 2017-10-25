@@ -69,9 +69,9 @@ MainCamera::MainCamera() :
 		false));
 	DIALOG_ASSERT(map->getBits());
 	MainMenuDialog::instance()->addMenu(
-		LANG_RESOURCE("CAMERA", "Camera"),
-		"Camera", 
-		LANG_RESOURCE("CAMERA_MENU", "Change the current camera view."),
+		LANG_RESOURCE((char *)"CAMERA", (char *)"Camera"),
+		(char *)"Camera", 
+		LANG_RESOURCE((char *)"CAMERA_MENU", (char *)"Change the current camera view."),
 		32, 0, this, map);
 }
 
