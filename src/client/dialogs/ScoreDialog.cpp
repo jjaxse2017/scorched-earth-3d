@@ -460,7 +460,7 @@ void ScoreDialog::draw()
 			getTargetContainer().getTankById(playerId);
 		if (current && !current->getState().getTankPlaying()) 
 		{
-			addLine(currentTank, current, y, " ", false, buying);
+			addLine(currentTank, current, y, (char *)" ", false, buying);
 			y+= lineSpacer;
 		}
 	}	
