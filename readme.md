@@ -16,15 +16,31 @@ sudo apt-get install debhelper dh-autoreconf gawk libalut-dev libexpat1-dev libf
 
 make -j4
 
+sudo mkdir /usr/local/games/scorched3d/share/
+
+sudo mkdir /usr/local/games/scorched3d/share/data
+
+sudo mkdir /usr/local/games/scorched3d/share/documentation
+
+sudo chown -R yourloginusername:yourloginusername /usr/local/games/scorched3d/
+
+chmod 755 -R /usr/local/games/scorched3d/
+
 make install
 
-strip --strip-unneeded --remove-section=.comment scorched3dc
+chmod 755 /usr/local/games/scorched3d/sorched3d
 
-Run scorched3dc in the terminal to play the game (Configure with scorched3d first, you'll get errors during configure just hit continue)
+chmod 755 /usr/local/games/scorched3d/sorched3dc
+
+chmod 755 /usr/local/games/scorched3d/sorched3ds
+
+strip --strip-unneeded --remove-section=.comment /usr/local/games/scorched3d/*
+
+Run scorched3dc in the terminal to play the game to check for any error outputs (Configure with scorched3d first, you'll get errors during configure just hit continue)
 
 #the game expects the unzipped data files to be in /usr/local/games/scorched3d/share (copy the sourcecode data directory)
 
-#This is for the jackd... though sound seems to work in ubuntu without doing the following:
+#This is for the jackd... though sound seems to work in ubuntu without doing the following and the following may be an old security risk from what i read:
 
 #add the following to /etc/security/limits.conf
 
