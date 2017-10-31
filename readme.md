@@ -77,7 +77,7 @@ glxgears -info
 
 #if glx core info shows a high open gl version than glx gears run the folowing command (my max core open gl version was 4.1 and yes COMPAT needs to be there for it to work)
 
-driconf #Set to overide gl version and use extra thread
+driconf #Set allow a higher compat profile for apps that request it, overide gl version and use extra thread and enable dual source blending
 Right click the cpufreq indicator that should have appeared in the right upper hand corner near the shutdown button and set the system to performance mode
 
 MESA_GL_VERSION_OVERRIDE=4.5COMPAT ./scorched3dc
