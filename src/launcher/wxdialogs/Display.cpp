@@ -26,7 +26,7 @@ static void createMainControls(wxWindow *parent, wxSizer *sizer)
 	// Display settings
 	wxStaticBox *displayBox = new wxStaticBox(parent, -1, wxT("&Display"));
 	wxStaticBoxSizer *displaySizer = new wxStaticBoxSizer(displayBox, wxVERTICAL);
-	wxFlexGridSizer *displaySizer2 = new wxFlexGridSizer(2, 3, 5, 5);
+	wxFlexGridSizer *displaySizer2 = new wxFlexGridSizer(0, 3, 5, 5);
 	wxStaticText *resText = new wxStaticText(parent, -1, wxT("&Resolution :"));
 	IDC_DISPLAY_CTRL = 
 		new wxComboBox(parent, -1,
@@ -88,7 +88,7 @@ static void createMainControls(wxWindow *parent, wxSizer *sizer)
 	// Sound settings
 	wxStaticBox *soundBox = new wxStaticBox(parent, -1, wxT("&Sound"));
 	wxStaticBoxSizer *soundSizerMain = new wxStaticBoxSizer(soundBox, wxVERTICAL);
-	wxFlexGridSizer *soundSizer1 = new wxFlexGridSizer(4, 2, 0, 0);
+	wxFlexGridSizer *soundSizer1 = new wxFlexGridSizer(0, 4, 2, 0);
 	wxStaticText *volumeText = new wxStaticText(parent, -1, wxT("Sound Volume :"));
 	wxStaticText *musicVolumeText = new wxStaticText(parent, -1, wxT("Music Volume :"));
 	wxStaticText *ambientVolumeText = new wxStaticText(parent, -1, wxT("Ambient Volume :"));
@@ -137,7 +137,7 @@ static void createMainControls(wxWindow *parent, wxSizer *sizer)
 		wxT("Game Detail Options"));
 	wxStaticBoxSizer *speedSizer = new wxStaticBoxSizer(speedBox, wxHORIZONTAL);
 
-	wxGridSizer *loadSizer = new wxFlexGridSizer(2, 2, 0, 0);
+	wxGridSizer *loadSizer = new wxFlexGridSizer(0, 2, 2, 0);
 	IDC_LOADULTRA_CTRL = new wxButton(parent,  ID_LOADULTRA, wxT("&Ultra Detail"), wxDefaultPosition, wxSize(120,-1));
 	IDC_LOADDEFAULTS_CTRL = new wxButton(parent, ID_LOADDEFAULTS, wxT("&Normal Detail"), wxDefaultPosition, wxSize(120,-1));
 	IDC_LOADMEDIUM_CTRL = new wxButton(parent, ID_LOADMEDIUM, wxT("Faster Detail"), wxDefaultPosition, wxSize(120,-1));
@@ -256,7 +256,7 @@ static void createSpeedControls(wxWindow *parent, wxSizer *sizer)
 		wxStaticBox *waterDetailBox = new wxStaticBox(parent, -1, 
 													  wxT("Graphics Detail"));
 		wxStaticBoxSizer *waterDetailSizer = new wxStaticBoxSizer(waterDetailBox, wxHORIZONTAL);
-		wxGridSizer *waterDetailSizer2 = new wxGridSizer(3, 1, 10, 10);
+		wxGridSizer *waterDetailSizer2 = new wxGridSizer(0, 1, 10, 10);
 		
 		IDC_NOWATERREF_CTRL = 
 		new wxCheckBox(parent, -1, wxT("Don't draw water reflections - Large Framerate Improvement"));
@@ -471,7 +471,7 @@ static void createKeysControls(wxWindow *parent, wxSizer *topsizer)
 {
 	wxScrolledWindow *scrolledWindow = new wxScrolledWindow(parent, -1, 
 		wxDefaultPosition, wxSize(480, 250));
-	wxSizer *sizer = new wxFlexGridSizer(5, 1, 0, 0);
+	wxSizer *sizer = new wxFlexGridSizer(0, 5, 1, 0);
 	
 	keyboardKeyList.clear();
 	if (!Keyboard::instance()->loadKeyFile())
