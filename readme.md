@@ -45,7 +45,7 @@ Run scorched3dc in the terminal to play the game to check for any error outputs 
 
 
 
-#Optional from here
+# Optional from here
 
 #This is for the jackd... though sound seems to work in ubuntu without doing the following and the following may be an old security risk from what i read:
 
