@@ -42,10 +42,15 @@ strip --strip-unneeded --remove-section=.comment /usr/local/games/scorched3d/*
 
 Run scorched3dc in the terminal to play the game to check for any error outputs (Configure with scorched3d first, you'll get errors during configure just hit continue)
 
+#
 
+#
 
+#
 
-# Optional from here
+#
+
+# The rest is optional from here
 
 #This is for the jackd... though sound seems to work in ubuntu without doing the following and the following may be an old security risk from what i read:
 
