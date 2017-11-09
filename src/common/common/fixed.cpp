@@ -90,12 +90,12 @@ const char *fixed::asString()
 	char buffer[20];
 	if (m_nVal < 0) 
 	{
-		snprintf(buffer, 15, "%lli", -m_nVal);
+		snprintf(buffer, 20, "%lli", -m_nVal);
 		result[r++] = '-';
 	}
 	else 
 	{
-		snprintf(buffer, 15, "%lli", m_nVal);
+		snprintf(buffer, 20, "%lli", m_nVal);
 	}
 	int len = (int) strlen(buffer);
 
