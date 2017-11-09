@@ -429,7 +429,7 @@ void ScoreDialog::draw()
 	{
 		// No Team
 		int rank = 1;
-		char strrank[10];
+		char strrank[11];
 		std::list<unsigned int>::iterator itor;
 		for (itor = sortedTanks_.begin();
 			itor != sortedTanks_.end();
@@ -439,7 +439,7 @@ void ScoreDialog::draw()
 			Tank *current = ScorchedClient::instance()->getTargetContainer().getTankById(playerId);
 			if (current && current->getState().getTankPlaying()) 
 			{
-				snprintf(strrank, 10, "%i", rank);
+				snprintf(strrank, 11, "%i", rank);
 
 				addLine(currentTank, current, y, strrank, finished, buying);
 				tmpLastScoreValue += current->getScore().getScore();
