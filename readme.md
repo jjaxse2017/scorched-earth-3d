@@ -40,7 +40,7 @@ strip --strip-unneeded --remove-section=.comment /usr/local/games/scorched3d/*
 
 #Reminder that the game expects the unzipped data files to be in /usr/local/games/scorched3d/share (copy the sourcecode data directory)
 
-Run scorched3dc in the terminal to play the game to check for any error outputs (Configure with scorched3d first, you'll get errors during configure just hit continue)
+Run scorched3dc in the terminal to play the game to check for any error outputs. I recommend configuring the game with scorched3d binary first
 
 #
 
