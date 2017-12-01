@@ -12,7 +12,9 @@ sudo apt-get install debhelper dh-autoreconf gawk libalut-dev libexpat1-dev libf
 
 #unzip with 7zip data/globalmods/apoc.7z and none.7z.001 none.7z.002
 
-#optionally unzip fprofile-use.tar.gz and add -f-profile-use to all ldflags and cflags option or go through the process of -fprofile-generate, run the program to stress its most common path and then recompile with -fprofile-use. The .gcda files will be hard linked to the path compiled from, this will improve game cpu performance dramatically and the game uses lots of cpu power with many AI players
+#optionally unzip fprofile-use.tar.gz and add -fprofile-use to all ldflags and cflags option or go through the process of -fprofile-generate, run the program to stress its most common path and then recompile with -fprofile-use. The .gcda files will be hard linked to the path compiled from, this will improve game cpu performance dramatically and the game uses lots of cpu power with many AI players
+
+#For those looking to run a dedicated server or to host games on the internet exposed to random access by others. I'd suggest adding -fstack-protector-all or at a minimum -fstack-protector. The cost of -fstack-protector-all, -fstack-protector-strong, -fstack-protector was stated to be 10 %, 1-5% and < 1% reduced performance to safeguard the computer system, as a side note -fprofile-generate -fprofile-use could eaisly make up for the reduced performance and overall be worthwhile for a dedicated server with many of AI players.
 
 ./configure
 
